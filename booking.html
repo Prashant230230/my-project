@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("C:/Users/MICRONET/OneDrive/Pictures/Gold Rolls Royce Phantom Limousine-jpg.jpeg"); 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; 
+        }
+
+        .container {
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Car Booking Form</h2>
+        <form action="/submit-booking" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="car">Select Car</label>
+            <select id="car" name="car" required>
+                <option value="" disabled selected>Select a car</option>
+                <option value="sedan">Sedan</option>
+                <option value="suv">SUV</option>
+                <option value="hatchback">Hatchback</option>
+                <option value="luxury">Luxury</option>
+            </select>
+		<label for="car">Driving Type</label>
+            <select id="car" name="car" required>
+                <option value="" disabled selected>Select a Driving Type</option>
+                <option value="Self Driveing">Self Driveing</option>
+                <option value="With out Driver">With out Driver</option>
+                
+            </select>
+
+
+            <label for="Number"><b>Car Number</b></label>
+            <input type="text" id="Number" name="Number" placeholder="For e,g MHxxBLxxxx" required>
+
+            <label for="pickup">Pick-Up Location</label>
+            <input type="text" id="pickup" name="pickup" placeholder="Enter pick-up location" required>
+
+            <label for="dropoff">Drop-Off Location</label>
+            <input type="text" id="dropoff" name="dropoff" placeholder="Enter drop-off location" required>
+
+            <label for="pickup_date">Pick-Up Date</label>
+            <input type="date" id="pickup_date" name="pickup_date" required>
+
+            <label for="dropoff_date">Drop-Off Date</label>
+            <input type="date" id="dropoff_date" name="dropoff_date" required>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

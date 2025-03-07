@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Feedback Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url("C:/Users/MICRONET/OneDrive/Pictures/1713655662_decouverte-de-la-nouvelle-rolls-royce-phantom-elegance-et-innovation.jpg"); 
+            background-size: cover;
+            background-repeat: no-repeat; 
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .feedback-form {
+            max-width: 500px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .feedback-form h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+        }
+
+        .form-group button {
+            width: 100%;
+            background-color: #5cb85c;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Success message */
+        #successMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="feedback-form">
+        <h2>Feedback</h2>
+        <form id="feedbackForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="rentalDate">Rental Date</label>
+                <input type="date" id="rentalDate" name="rentalDate" required>
+            </div>
+            <div class="form-group">
+                <label for="carModel">Car Model</label>
+                <input type="text" id="carModel" name="carModel" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Overall Rating</label>
+                <select id="rating" name="rating" required>
+                    <option value="">-- Select Rating --</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <textarea id="comments" name="comments" rows="5" placeholder="Write your feedback here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Feedback</button>
+            </div>
+        </form>
+
+        <!-- Success Message -->
+        <p id="successMessage">Feedback submitted successfully!</p>
+    </div>
+
+    <script>
+        // Select the form and success message elements
+        const form = document.getElementById('feedbackForm');
+        const successMessage = document.getElementById('successMessage');
+
+        // Add an event listener for form submission
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Show the success message
+            successMessage.style.display = 'block';
+
+            // Optionally, hide the success message after 3 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+                form.reset(); // Reset form fields after submission
+            }, 3000);
+        });
+    </script>
+
+</body>
+</html>

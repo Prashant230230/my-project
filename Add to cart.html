@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental - Cart</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+        header { background: #000; color: #fff; padding: 15px 0; text-align: center; font-size: 1.5em; }
+        .container { width: 80%; margin: auto; padding: 20px; background: white; }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #ddd; }
+        .cart-item img { width: 100px; height: auto; border-radius: 5px; }
+        .cart-item h3 { margin: 0; font-size: 1.2em; }
+        .cart-item p { margin: 5px 0; color: #555; }
+        .cart-item button { background: red; color: white; border: none; padding: 8px 12px; cursor: pointer; border-radius: 5px; }
+        .cart-item button:hover { background: darkred; }
+        .checkout { text-align: right; padding: 20px; }
+        .checkout button { background: green; color: white; padding: 10px 20px; border: none; font-size: 1.2em; cursor: pointer; border-radius: 5px; }
+        .checkout button:hover { background: darkgreen; }
+    </style>
+</head>
+<body>
+    <header>Car Rental - Cart</header>
+    <div class="container">
+        <div class="cart-item">
+            <img src="car1.jpg" alt="Car">
+            <div>
+                <h3>Sedan Car</h3>
+                <p>Price per Hour: 1000</p>
+            </div>
+            <button>Remove</button>
+        </div>
+        <div class="cart-item">
+            <img src="car2.jpg" alt="Car">
+            <div>
+                <h3>SUV Car</h3>
+                <p>Price per Hour: 1,499</p>
+            </div>
+            <button>Remove</button>
+        </div>
+<div class="cart-item">
+            <img src="car2.jpg" alt="Car">
+            <div>
+                <h3>HatchBack Car</h3>
+                <p>Price per Hour: 799</p>
+            </div>
+            <button>Remove</button>
+        </div>
+<div class="cart-item">
+            <img src="car2.jpg" alt="Car">
+            <div>
+                <h3>Luxary Car</h3>
+                <p>Price per Hour: 19,999</p>
+            </div>
+            <button>Remove</button>
+        </div>
+
+        <div class="checkout">
+            <button>Proceed to Checkout</button>
+        </div>
+    </div>
+</body>
+</html>

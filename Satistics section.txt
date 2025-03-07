@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics Section</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background-image.jpg') no-repeat center center/cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 50px 0;
+        }
+        .stat-box {
+            background: blue;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="stats-container">
+        <div class="stat-box">
+            <p>📅</p>
+            <p>3000+<br>Active Daily</p>
+        </div>
+        <div class="stat-box">
+            <p>🚗</p>
+            <p>36,00,000+<br>KMs Traveled</p>
+        </div>
+        <div class="stat-box">
+            <p>😊</p>
+            <p>95,000+<br>Happy Users</p>
+        </div>
+        <div class="stat-box">
+            <p>🚘</p>
+            <p>6500+<br>Number of Cars</p>
+        </div>
+    </div>
+</body>
+</html>

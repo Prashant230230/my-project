@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>form 1</title>
+</head>
+<body>
+<form action ="test1.php" method="GET">
+roll_no:<input type="number" name="roll_no"><br><br> 
+name:<input type="text" name="fname"><br><br> 
+class:<input type="text" name="class"><br><br> 
+contact_no:<input type="number" name="contact_no"><br><br>
+email_id:<input type="text" name="email_id"><br><br> 
+ <input type="submit" name="save">
+</body>
+</html>
+Test1.php
+<?php
+echo"<pre>";
+print_r ($_GET);
+echo"</pre>";
+echo $_GET['fname'];
+?>
+

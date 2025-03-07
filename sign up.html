@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <title>Sign Up | RentalX</title>
+  <style>
+    /* Body with Background Image */
+    body {
+      font-family: Arial, sans-serif;
+      background-image: url("C:/Users/MICRONET/OneDrive/Pictures/Gold Rolls Royce Phantom Limousine-jpg.jpeg"); /* Fixed image path */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* Semi-transparent container for the form */
+    .auth__container {
+      max-width: 400px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .auth__container h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+
+    .auth__form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form__group {
+      text-align: left;
+    }
+
+    .form__group label {
+      font-size: 14px;
+      margin-bottom: 5px;
+      display: block;
+      color: #555;
+    }
+
+    .form__group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form__actions button {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      background: #007bff;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .form__actions button:hover {
+      background: #0056b3;
+    }
+
+    .auth__container p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .auth__container p a {
+      color: #007bff;
+      text-decoration: none;
+    }
+
+    .auth__container p a:hover {
+      text-decoration: underline;
+    }
+
+    /* Success Message Styling */
+    #successMessage {
+      display: none;
+      color: rgb(0, 0, 0);
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="auth__container">
+    <h1>Create an Account</h1>
+    <form id="signupForm">
+      <!-- Full Name -->
+      <div class="form__group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <!-- Email -->
+      <div class="form__group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <!-- Mobile Number -->
+      <div class="form__group">
+        <label for="Number">Mobile Number</label>
+        <input type="number" id="Number" name="Number" placeholder="Enter your Mobile Number" required>
+      </div>
+      <!-- Address -->
+      <div class="form__group">
+        <label for="Address">Address</label>
+        <input type="Address" id="Address" name="Address" placeholder="Enter your Address" required>
+      </div>
+      <!-- Password -->
+      <div class="form__group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <!-- Confirm Password -->
+      <div class="form__group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter your password" required>
+      </div>
+<br>
+      <!-- Submit Button -->
+      <div class="form__actions">
+        <button type="submit">Sign Up</button>
+      </div>
+    </form>
+
+    <!-- Success Message -->
+    <p id="successMessage">Your account has been created successfully!</p>
+
+    <p>Already have an account? <a href="C:\TURBOC3\BIN\PROJECT\sign.html">Sign In here</a>.</p>
+  </section>
+
+  <script>
+    // Select the form and success message elements
+    const form = document.getElementById('signupForm');
+    const successMessage = document.getElementById('successMessage');
+
+    // Add an event listener for form submission
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent actual form submission
+
+      // Show the success message
+      successMessage.style.display = 'block';
+
+      // Optionally, hide the success message after 3 seconds
+      setTimeout(() => {
+        successMessage.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+
+</body>
+</html>
